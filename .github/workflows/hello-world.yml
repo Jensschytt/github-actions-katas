@@ -35,6 +35,12 @@ jobs:
         with:
           name: code
           path: .
+      - name: Upload Repo
+      uses: actions/upload-artifact@v2
+      with:
+        name: thing upload jar
+        path: app/build/libs/app-0.1-all.jar
+        
   Docker-image: 
       runs-on: ubuntu-latest
       needs: [Build]
